@@ -52,8 +52,8 @@ st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("פיזור נקודות (X מול Y)")
-    fig_scatter = px.scatter(df, x="X", y="Y", hover_name="שם נקודה", color_discrete_sequence=[color])
+    st.subheader("פיזור נקודות (כמו אוטוקד)")
+    fig_scatter = px.scatter(df, x="Y", y="X", hover_name="שם נקודה", color_discrete_sequence=[color])
     fig_scatter.update_traces(marker=dict(size=5 if len(df) > 100 else 8))
     fig_scatter.update_layout(height=320, margin=dict(t=10, b=10))
     st.plotly_chart(fig_scatter, use_container_width=True)
